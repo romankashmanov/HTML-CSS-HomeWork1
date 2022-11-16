@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PhotoLine</title>
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+    <div class="page-container">
+        <!--HEADER-->
+        <header class="header container">
+            <div class="logo"></div>
+            <!--            <h1>Фотолайн</h1>-->
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- MAIN -->
+        <main class="main container">
+            <h3>Напишите нам</h3>
+            <form action="#" class="feedback float container">
+                <fieldset>
+                   <legend>Обратная связь</legend>
+                    <label for="name">Представьтесь</label>
+                    <input type="text" placeholder="Имя" name="name" id="name">
+                    <br>
+                    <label for="email">Электронная почта</label>
+                    <input type="email" placeholder="name@example.com" name="email" id="email">
+                    <br>
+                    <label for="tel">Номер телефона</label><br>
+                    +7<input type="tel" placeholder="xxx-xxx-xx-xx" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                    <br>
+                    <label for="topic">Тема обращения</label>
+                        <select name="topic" id="topic">
+                            <option value="default" selected>---</option>
+                            <option value="offer">Отзыв</option>
+                            <option value="claim">Жалоба</option>
+                            <option value="other">Прочее</option>
+                        </select>
+                    
+                    <br>
+                    <label for="message">Сообщение</label>
+                    <textarea cols="35" rows="7"  name="message" id="message" ></textarea>
+                    <br>
+                    <input type="checkbox" name="policy" id="policy" checked>
+                    <label for="policy" class="policy">Я принимаю условия <a href="#">Политики конфиденциальности</a></label>
+                    <br>
+                    <input type="submit"> 
+                    </fieldset>
+            </form>
+            <div class="container float">
+            <h3>Адрес</h3>
+            <ul class="contacts">
+                <li class="list-phone">Тел.: +7 846 965-95-35</li>
+                <li class="list-address">Адрес: г. Самара, ул. Самарская, д.188В</li>
+                <li class="list-email">Email: sales@photoline.ru</li>
+                <li class="list-time">График работы:
+                    <ul class="schedule">
+                        <li>Пн.-Пт.: 9:00 - 18:00</li>
+                        <li>Сб.: 9:00 - 17:00</li>
+                        <li>Вс.: Выходной</li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae4f5066dbb2898711ab981f7390eaaa1a0acd8af475ac38bc34cbf89a4982646&amp;width=100%&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+            <!--      width=719&amp;height=527&amp  -->
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer container">
+            <p>&copy;&nbsp; Все права защищены</p>
+        </footer>
+    </div>
+</body>
+
+</html>

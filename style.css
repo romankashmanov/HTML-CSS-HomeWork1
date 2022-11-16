@@ -1,0 +1,362 @@
+body {
+    background-color: #f8f8f8;
+    font-family: "Times new Roman", serif;
+}
+
+.page-container {
+    min-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: aliceblue;
+
+}
+
+.container {
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.header {
+    height: 120px;
+    padding-top: 20px;
+    background-color: #def4f6;
+    background-image: url(img/head.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* добавляем логотип */
+/*https://app.logoza.ru/?title=%D1%84%D0%BE%D1%82%D0%BE&slogan=%D1%84%D0%BE%D1%82%D0%BE*/
+
+.logo {
+    width: 230px;
+    height: 80px;
+    background-image: url(img/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+/*=====================================================*/
+/* меню сайта */
+
+.menu,
+.specification,
+.contacts {
+    list-style-type: none;
+}
+
+.menu,
+.sub-menu {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #8f8f8f;
+    display: inline-block;
+    /*горизонтальное меню*/
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-top: 5px;
+}
+
+.menu li a:hover {
+    background-color: #5f5f5f;
+}
+
+.menu li a:active {
+    background-color: #000;
+}
+
+.sub-menu {
+    display: none;
+}
+
+/*=====================================================*/
+/* MAIN страницы */
+
+.main {
+    min-height: calc(100vh - 225px);
+}
+
+/*=====================================================*/
+/* подвал сайта */
+
+.footer {
+    margin: 0;
+    height: 50px;
+    background-color: rgb(37, 55, 81);
+    color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer p {
+    margin: auto 0;
+    padding: 0;
+}
+
+/*=====================================================*/
+/* страница католога */
+
+.product-item img {
+    width: 200px;
+}
+.product-item h3 {
+    height: 40px; /* задаем высоту загаловка, чтобы помещались две строки текста*/   
+}
+
+.product-item {
+    box-sizing: border-box;
+    padding: 0;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 240px;
+    height: 240px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/*=====================================================*/
+/* страница продукта */
+
+.buy {
+    width: 90px;
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: azure;
+    background-color: rgb(37, 81, 81);
+    border-radius: 5px;
+}
+
+.buy:hover {
+    background-color: chocolate;
+}
+
+.buy:active {
+    background-color: darkgoldenrod;
+}
+
+.product h3 {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+
+.product h4 {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeafa;
+}
+
+.price {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product img {
+    outline: 3px solid #5f5f5f;
+    float: left;
+    margin-right: 20px;
+}
+
+.summary::after {    /* прекращаем обтекание после параграфа с кратким описанием*/
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.product img:hover {
+    outline: none;
+}
+
+.summary {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.description p {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.product p::first-letter {    /* у первой буквы параграфа меняем оформление */
+    font-family: cursive;
+    font-size: 36px;
+}
+
+.table-specification {
+    /*    width: 1000px;*/
+    /*    height: 300px;*/
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.table-specification td,
+.table-specification th {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 5px;
+}
+
+.table-specification caption {
+    font-family: monospace;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.table-specification tr {
+    height: 20px;
+}
+
+.table-specification tr:first-child {
+    height: 100px;
+}
+
+
+/* список характеристик товара */
+
+.specification li,
+.contacts > li {
+    color: #5555aa;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 30px;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.specification li {
+    background-image: url(icons/exposure.png);
+    background-size: 15px;
+}
+
+/*============================================================*/
+/* обратная связь */
+
+.feedback {
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 350px;
+    border-radius: 10px;
+    padding: 5px;
+    float: left;
+}
+
+.feedback fieldset {
+    border-radius: 10px;
+    border: 2px solid #555599;
+}
+
+.feedback legend {
+    color: #555599;
+}
+
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback input[type="tel"],
+.feedback select {
+    width: 200px;
+    height: 20px;
+}
+
+.feedback input[type="tel"] {
+    width: 180px;
+}
+
+.feedback input,
+.feedback textarea,
+.feedback select {
+    padding-left: 5px;
+    color: #555599;
+    margin: 5px;
+}
+.feedback input::placeholder {
+    color: #555577;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.feedback input[type="text"],
+.feedback textarea {
+    text-transform: capitalize;
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+    color: #787018;
+    background-color: #fdffde;
+}
+
+.feedback input[type="email"]:focus {
+    color: #a31616;
+    background-color: #f8c9c9;
+}
+
+.policy {
+    font-size: 12px;
+}
+
+
+
+/* список контактов */
+.float {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.contacts {
+    padding: 0; /* нужно будет сбросить стандартные стили (найте подходящий reset.css)*/
+}
+
+
+.contacts > li {
+    background-size: 20px;
+}
+
+.list-phone {
+    background-image: url(icons/icons8-phone-32.png);
+}
+
+.list-address {
+    background-image: url(icons/icons8-home-32.png);
+}
+
+.list-email {
+    background-image: url(icons/icons8-secured-letter-32.png);
+}
+
+li.list-time {
+    background-image: url(icons/icons8-calendar-32.png);
+    background-position: left top;
+}
